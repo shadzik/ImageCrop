@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NZx-b0-Hnb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NZx-b0-Hnb" secondAttribute="height" multiplier="1:1" id="QWP-NM-Ees"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kps-9v-m2O">
+                                <rect key="frame" x="268" y="555" width="63" height="30"/>
+                                <state key="normal" title="300x300"/>
+                                <connections>
+                                    <action selector="cropTo300x300:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eaY-rg-Lyn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAb-gA-S65">
+                                <rect key="frame" x="170" y="555" width="58" height="30"/>
+                                <state key="normal" title="150x150"/>
+                                <connections>
+                                    <action selector="cropTo150x150:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FAT-Xf-QwR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3T-hx-VpH">
+                                <rect key="frame" x="265" y="510" width="69" height="30"/>
+                                <state key="normal" title="Full Width"/>
+                                <connections>
+                                    <action selector="cropToFullWidth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WMO-UO-oTl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LA-Pz-rOy">
+                                <rect key="frame" x="371" y="555" width="63" height="30"/>
+                                <state key="normal" title="600x600"/>
+                                <connections>
+                                    <action selector="cropTo600x600:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N4V-Ql-1V3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kps-9v-m2O" firstAttribute="leading" secondItem="LAb-gA-S65" secondAttribute="trailing" constant="40" id="HHK-vF-0dZ"/>
+                            <constraint firstItem="NZx-b0-Hnb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Im9-Sk-bW7"/>
+                            <constraint firstAttribute="trailing" secondItem="NZx-b0-Hnb" secondAttribute="trailing" id="KZm-eO-xfx"/>
+                            <constraint firstItem="kps-9v-m2O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LrZ-AL-5rq"/>
+                            <constraint firstItem="kps-9v-m2O" firstAttribute="baseline" secondItem="LAb-gA-S65" secondAttribute="baseline" id="T0t-IV-Znh"/>
+                            <constraint firstItem="4LA-Pz-rOy" firstAttribute="leading" secondItem="kps-9v-m2O" secondAttribute="trailing" constant="40" id="VY4-gq-GV2"/>
+                            <constraint firstItem="NZx-b0-Hnb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cms-hD-izI"/>
+                            <constraint firstItem="kps-9v-m2O" firstAttribute="top" secondItem="K3T-hx-VpH" secondAttribute="bottom" constant="15" id="nHJ-vD-kuW"/>
+                            <constraint firstItem="4LA-Pz-rOy" firstAttribute="baseline" secondItem="LAb-gA-S65" secondAttribute="baseline" id="oM7-xS-vQK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kps-9v-m2O" secondAttribute="bottom" constant="15" id="qCg-Hl-YIg"/>
+                            <constraint firstItem="K3T-hx-VpH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tRF-2p-0ez"/>
+                            <constraint firstItem="NZx-b0-Hnb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xBd-jD-7NG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="NZx-b0-Hnb" id="oak-fP-URj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="429"/>
+        </scene>
+    </scenes>
+</document>
